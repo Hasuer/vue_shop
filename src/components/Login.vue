@@ -13,7 +13,7 @@
           <el-input  v-model="loginForm.password" prefix-icon="el-icon-lock" type="password"></el-input>
         </el-form-item>
         <el-form-item class="btns">
-          <el-button type="primary">登录</el-button>
+          <el-button type="primary">登录12</el-button>
           <el-button type="info">重置</el-button>
         </el-form-item>
       </el-form>
