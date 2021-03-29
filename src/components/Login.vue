@@ -4,6 +4,12 @@
       <div class="avatar_box">
         <img src="../assets/logo.png" alt="avatar">
       </div>
+      <!--      登录表单-->
+      <el-form label-width="80px">
+        <el-form-item label="Username">
+          <el-input></el-input>
+        </el-form-item>
+      </el-form>
     </div>
   </div>
 </template>
@@ -12,7 +18,7 @@
 export default {}
 </script>
 
-<style Lang="less" scoped>
+<style lang="less" scoped>
 .login_container {
   background-color: #2b4b6b;
   height: 100%;
@@ -32,11 +38,19 @@ export default {}
     height: 130px;
     width: 130px;
     border: 1px solid #eee;
-    border-radius: 50px;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 10px #ddd;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
 
     img {
-      width: 50px;
+      width: 100%;
       height: 100%;
+      border-radius: 50%;
+      background-color: #eee;
     }
   }
 }
