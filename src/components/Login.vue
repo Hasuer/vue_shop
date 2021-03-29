@@ -5,9 +5,16 @@
         <img src="../assets/logo.png" alt="avatar">
       </div>
       <!--      登录表单-->
-      <el-form label-width="80px">
-        <el-form-item label="Username">
-          <el-input></el-input>
+      <el-form :model='loginForm' label-width="0px" class="login_form">
+        <el-form-item>
+          <el-input  v-model="loginForm.username" prefix-icon="el-icon-user"></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-input  v-model="loginForm.password" prefix-icon="el-icon-lock" type="password"></el-input>
+        </el-form-item>
+        <el-form-item class="btns">
+          <el-button type="primary">登录</el-button>
+          <el-button type="info">重置</el-button>
         </el-form-item>
       </el-form>
     </div>
@@ -15,7 +22,17 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      loginForm: {
+        username: '',
+        password: ''
+      }
+    }
+  }
+}
+
 </script>
 
 <style lang="less" scoped>
@@ -53,5 +70,18 @@ export default {}
       background-color: #eee;
     }
   }
+}
+
+.login_form {
+  position: absolute;
+  bottom: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.btns {
+  display: flex;
+  justify-content: flex-end;
 }
 </style>
